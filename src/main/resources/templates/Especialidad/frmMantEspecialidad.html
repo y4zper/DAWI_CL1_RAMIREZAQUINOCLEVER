@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout::head">
+
+</head>
+<body>
+
+<nav th:insert="layout::menu"></nav>
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Costo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="especialidad :${listarEspecialidad}">
+      <td th:text="${especialidad.idesp}"></td>
+      <td th:text="${especialidad.nomesp}"></td>
+      <td th:text="${especialidad.costo}"></td>
+    </tr>    
+  </tbody>	
+</table>
+
+</body>
+</html>
